@@ -51,7 +51,7 @@ function App() {
         </div>
         <div className="page-wrapper">
           <div className="card">
-            <h1>Customize the Appearance</h1>
+            <h1>Appearance</h1>
 
             <p className="section-heading">Theme</p>
             <div className="themes">
