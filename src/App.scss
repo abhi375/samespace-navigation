@@ -1,0 +1,91 @@
+.page {
+  margin: 32px 32px;
+  &-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .divider {
+    margin: 32px 0;
+    opacity: 0.2;
+  }
+
+  .card {
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.06),
+      0 8px 12px rgba($color: #000000, $alpha: 0.06);
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .section-heading {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .themes {
+    display: flex;
+    .color-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      margin-right: 16px;
+      cursor: pointer;
+    }
+
+    .input {
+      all: unset;
+      box-sizing: border-box;
+      padding: 12px;
+      border: 2px solid rgba($color: #000000, $alpha: 0.1);
+      border-radius: 8px;
+      font-size: 1.2rem;
+      &::placeholder {
+        opacity: 0.5;
+      }
+      &:focus {
+        border-color: #1024f0;
+        border-width: 2px;
+      }
+    }
+  }
+
+  .switcher {
+    background-color: #fff;
+    display: grid;
+    width: 241px;
+    grid-template-columns: 120px 1px 120px;
+    align-items: center;
+    border: 1px solid rgba($color: #000000, $alpha: 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    &-seperator {
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+    &-option {
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      justify-content: center;
+      font-weight: 600;
+      &.active {
+        background-color: #0057ff;
+        color: #fff;
+      }
+    }
+  }
+}
