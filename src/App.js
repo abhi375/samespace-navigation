@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
+import UIImage from "./assets/ui.png";
 import "./App.scss";
 import Nav from "./Nav";
 
@@ -19,6 +20,7 @@ function App() {
   ]);
 
   const [iconColor, setIconColor] = useState("#fff");
+  const [showAppearancePanel, setShowAppearancePanel] = useState(true);
 
   const handleAccentChange = (event) => {
     setAccent(event.target.value);
@@ -34,7 +36,19 @@ function App() {
         tooltipBackground={tooltipBackground}
       />
 
-      <section className="page">
+      <img src={UIImage} width="100%" />
+
+      <motion.section
+        className="sidebar"
+        animate={{ bottom: showAppearancePanel ? 0 : "-548px" }}
+        transition={{ easings: "easeInOut", duration: 0.3 }}
+      >
+        <div
+          className="panel-toggle"
+          onClick={() => setShowAppearancePanel(!showAppearancePanel)}
+        >
+          {showAppearancePanel ? "Hide Panel" : "Customize Nav"}
+        </div>
         <div className="page-wrapper">
           <div className="card">
             <h1>Customize the Appearance</h1>
@@ -160,10 +174,9 @@ function App() {
                 )}
               </div>
             </div>
-            <hr className="divider" />
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }
