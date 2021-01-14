@@ -138,7 +138,7 @@ export default function Nav({
           <div className="icon">
             {iconStyle === "lined" ? <BellIcon /> : <BellSolidIcon />}
           </div>
-          <img src={Avatar} width="32px" height="32px" />
+          <img alt="user" src={Avatar} width="32px" height="32px" />
         </div>
       </div>
     </nav>

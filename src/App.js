@@ -36,7 +36,7 @@ function App() {
         tooltipBackground={tooltipBackground}
       />
 
-      <img src={UIImage} width="100%" />
+      <img src={UIImage} width="100%" alt="UI" />
 
       <motion.section
         className="sidebar"
